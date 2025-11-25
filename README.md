@@ -237,7 +237,7 @@ namespace Lib {
             return new T(nex::forward<Ts&&>(args)...);
         }
 
-        // This is intentional standard code, no need to panic, it doesn't have
+        // This is intentional boilerplate code, no need to panic, it doesn't have
         // the same responsibility as the internal construction of scoped pointers.
         template<typename T, typename... Ts>
         static constexpr nex::scoped_ptr<T> create_scoped_ptr(Ts&&... args) noexcept {
