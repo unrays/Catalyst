@@ -237,8 +237,8 @@ namespace Lib {
             return new T(nex::forward<Ts&&>(args)...);
         }
 
-        // It's an intentional boilerplate, don't panic, they don't have the
-        // same responsability, the unique_ptr factory
+        // This is intentional standard code, no need to panic, it doesn't have
+        // the same responsibility as the internal construction of scoped pointers.
         template<typename T, typename... Ts>
         static constexpr nex::scoped_ptr<T> create_scoped_ptr(Ts&&... args) noexcept {
             return nex::make_scoped_ptr<T>(nex::forward<Ts&&>(args)...);
