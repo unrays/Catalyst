@@ -270,9 +270,9 @@ using namespace Lib; int main() {
         }
         {
             // Unique-ish pointer
-            auto instanceUnique = create_scoped_ptr<Object>(300, 30.0);
-            instanceUnique->methodA();
-            instanceUnique->methodB();
+            auto instanceScoped = create_scoped_ptr<Object>(300, 30.0);
+            instanceScoped->methodA();
+            instanceScoped->methodB();
         }
     } // RELEASE: object lifecycle ends here
 }
